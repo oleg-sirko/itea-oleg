@@ -33,12 +33,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SearchTest {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     @Before
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver,15);
 
     }
     @After
@@ -49,10 +51,15 @@ public class SearchTest {
     public void searchTest() {
         driver.get("https://itea.ua/uk/");
         driver.manage().window().setSize(new Dimension(1440, 790));
-        driver.findElement(By.cssSelector(".show-search:nth-child(2)")).click();
-        driver.findElement(By.cssSelector(".header-search #s")).sendKeys("qa automation");
-        driver.findElement(By.cssSelector(".header-search #s")).sendKeys(Keys.ENTER);
-        driver.findElement(By.cssSelector("div:nth-child(3) > .btn")).click();
+        //driver.findElement(By.xpath("//button[contains(text(), 'Пошук')]")).click();
+        driver.findElement(By.xpath("//button[contains(.,\'Пошук\')]")).click();
+        //driver.findElement(By.cssSelector(".header-search #s")).sendKeys("qa automation");
+        driver.findElement(By.xpath("(//form[@id=\'searchform\']/input)[3]")).sendKeys("qa automation");
+        //driver.findElement(By.cssSelector(".header-search #s")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("(//form[@id=\'searchform\']/input)[3]")).sendKeys(Keys.ENTER);
+        //wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div:nth-child(3) > btn")));
+        //driver.findElement(By.cssSelector("div:nth-child(3) > .btn")).click();
+        driver.findElement(By.xpath("(//a[contains(text(),\'ПОДРОБНЕЕ\')])[2]")).click();
         String actualTitle = driver.getTitle();
         String expectedTitle = "Курси автоматизованого тестування в Києві | ITEA";
         assertEquals(actualTitle, expectedTitle);
