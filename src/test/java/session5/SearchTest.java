@@ -41,7 +41,8 @@ public class SearchTest {
     @Before
     public void setUp() {
         //install latest ChromeDriver
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/Users/olegsirko/utils/browsers/chromedriver");
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
