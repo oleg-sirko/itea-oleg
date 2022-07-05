@@ -32,7 +32,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
-
 public class SearchTest {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -53,10 +52,10 @@ public class SearchTest {
         driver = new ChromeDriver(capabilities=capabilities);
 
         //set implicit wait
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         //initialize WebDriverWait object for explicit waits
-        wait = new WebDriverWait(driver,7);
+        wait = new WebDriverWait(driver,20);
 
     }
     @After
@@ -71,11 +70,12 @@ public class SearchTest {
 
         //Click on Search field
         element = driver.findElement(By.xpath("//button[@class = 'show-search']"));
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
 
         //Enter search term to Search field
-        element = driver.findElement(By.cssSelector(".header-search #s"));
+        element = driver.findElement(By.xpath("//div[@class='modal-search-form']//input[@placeholder='Поиск по сайту']"));
         element.sendKeys("qa automation");
 
         //Emulate pressing Enter button on kbrd
@@ -83,12 +83,16 @@ public class SearchTest {
         element.sendKeys(Keys.ENTER);
 
         //Click "Подробнее" for QA Automation
-        element = driver.findElement(By.cssSelector("div:nth-child(3) > .btn"));
+        element = driver.findElement(By.xpath("//a[@class='btn btn-sm btn-green btn-det' and contains " +
+                "(@href, 'https://itea.ua/uk/courses_itea/qa_roadmap/qa_auto/')]"));
         wait.until(ExpectedConditions.elementToBeClickable(element));
+
         {
             Actions builder = new Actions(driver);
             builder.moveToElement(element, 0, 0).perform();
         }
+        //прокрутка
+       ((JavascriptExecutor) driver).executeScript("scroll(0,250);");
         element.click();
 
         //Get page Title
