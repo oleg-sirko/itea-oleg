@@ -41,7 +41,8 @@ public class SearchTest {
     @Before
     public void setUp() {
         //install latest ChromeDriver
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().version("103.0").setup();
+        System.setProperty("webdriver.chrome.driver", "D:\\Soft\\chromedriver.exe");
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
@@ -50,7 +51,7 @@ public class SearchTest {
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
         //start browser (initialize WebDriver object)
-        driver = new ChromeDriver(capabilities=capabilities);
+        driver = new ChromeDriver();
 
         //set implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -75,7 +76,7 @@ public class SearchTest {
         element.click();
 
         //Enter search term to Search field
-        element = driver.findElement(By.cssSelector(".header-search #s"));
+        element = driver.findElement(By.xpath("//div[@class='header-search']/form/input[@id='s']"));
         element.sendKeys("qa automation");
 
         //Emulate pressing Enter button on kbrd
@@ -83,7 +84,7 @@ public class SearchTest {
         element.sendKeys(Keys.ENTER);
 
         //Click "Подробнее" for QA Automation
-        element = driver.findElement(By.cssSelector("div:nth-child(3) > .btn"));
+        element = driver.findElement(By.xpath("(//a[@href= 'https://itea.ua/uk/courses_itea/qa_roadmap/qa_auto/'])[2]"));
         wait.until(ExpectedConditions.elementToBeClickable(element));
         {
             Actions builder = new Actions(driver);
