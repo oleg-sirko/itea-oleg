@@ -1,17 +1,16 @@
 package task7;
 
-public class Student {
+public class Student
+{
     private String name;
     private boolean coding;
 
-    public Student() {
+    public Student(String name);
+
+    public void runHomeTask()
+        {
+            System.out.println (name + "is coding");
+        }
     }
 
-    public void runHomeTask() {
 
-    }
-
-    public String getName() {
-        return name;
-    }
-}
