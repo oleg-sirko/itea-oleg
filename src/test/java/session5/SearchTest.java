@@ -13,12 +13,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.KeyInput;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
@@ -38,6 +40,7 @@ public class SearchTest {
     private WebDriverWait wait;
     private WebElement element;
 
+
     @Before
     public void setUp() {
         //install latest ChromeDriver
@@ -55,6 +58,7 @@ public class SearchTest {
 
         //set implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver,10);
 
         //initialize WebDriverWait object for explicit waits
         wait = new WebDriverWait(driver,7);
@@ -66,6 +70,8 @@ public class SearchTest {
         driver.quit();
     }
     @Test
+    //HEAD
+
     public void searchTest() throws InterruptedException {
         // Open url
         driver.get("https://itea.ua/uk/");
@@ -93,10 +99,12 @@ public class SearchTest {
         element.click();
 
         //Get page Title
+
         String actualTitle = driver.getTitle();
 
         //Verify Title is as expected
         String expectedTitle = "Курси автоматизованого тестування в Києві | ITEA";
         assertEquals(actualTitle, expectedTitle);
+
     }
 }
