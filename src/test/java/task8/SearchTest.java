@@ -43,7 +43,8 @@ public class SearchTest {
     public void setUp() {
         //install latest ChromeDriver
         //WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Костя\\Desktop\\QAuto\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Костя\\Desktop\\QAuto\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/olegsirko/Downloads/chromedriver");
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
