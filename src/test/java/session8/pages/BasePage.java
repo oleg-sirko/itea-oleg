@@ -1,4 +1,4 @@
-package session8;
+package session8.pages;
 
 import org.junit.After;
 import org.junit.Before;

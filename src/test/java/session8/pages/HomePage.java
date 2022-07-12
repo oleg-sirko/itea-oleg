@@ -1,28 +1,23 @@
-package session8;
+package session8.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.security.Key;
-
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     @FindBy (xpath = "//button[@class = 'show-search']")
-    WebElement showSearchButton;
+    public WebElement showSearchButton;
 
     @FindBy (css = ".header-search #s")
-    WebElement searchField;
+    public WebElement searchField;
 
     @FindBy (xpath = "//a[text()='Дитячі курси']")
-    WebElement childrenCoursesLink;
+    public WebElement childrenCoursesLink;
 
-    WebDriverWait wait;
+    public WebDriverWait wait;
 
 
     public HomePage (WebDriver driver) {

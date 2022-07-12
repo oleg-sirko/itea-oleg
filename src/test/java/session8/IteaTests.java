@@ -2,11 +2,15 @@ package session8;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
+import session8.pages.BasePage;
+import session8.pages.HomePage;
+import session8.pages.SearchResultsPage;
+
 import static org.junit.Assert.assertEquals;
 
 
 
-public class IteaTests extends BasePage{
+public class IteaTests extends BasePage {
 
     public IteaTests(){
         super();
