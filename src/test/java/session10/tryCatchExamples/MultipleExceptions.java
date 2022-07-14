@@ -6,10 +6,7 @@ class ListOfNumbers {
 
         try {
             arr[10] = 11;
-        }
-
-
-        catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
             System.out.println("Either ArrayIndexOutOfBoundsException or NumberFormatException occured => " + e.getMessage());
         }
 
@@ -57,6 +54,7 @@ class ListOfNumbers {
         */
 
 
+    }
 }
 
 class MultipleExceptions {
