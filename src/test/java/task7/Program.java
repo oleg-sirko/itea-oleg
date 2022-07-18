@@ -9,14 +9,12 @@ import javax.xml.namespace.QName;
 public class Program {
 
     public static void main(String[] args) {
-        //Student student = new Student("Oleg");
-        QaAutomationStudent me = new QaAutomationStudent();
 
-        me.runHomeTask();
-
-
-    }
-
+        Student student = new Student("Oleg");
+        QaAutomationStudent qaAutomationStudent = new QaAutomationStudent ("Mary");
+        student.runHomeTask();
+        qaAutomationStudent.runHomeTask();
 
     }
+}
 

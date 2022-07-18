@@ -5,15 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb9c4591-30dc-4c31-80c7-11c5b0e11127" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/session7/Carnivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/session7/Carnivore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea/.idea.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/itea-oleg.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/SearchResultsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/SearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session8/IteaTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session8/pages/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session8/pages/CoursePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session8/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session8/pages/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/session5/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/session5/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/task7/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/task7/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/task7/QaAutomationStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/task7/QaAutomationStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/task7/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/task7/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session5/SearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/Carnivore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/CatBranch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/DogBranch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/Herbivore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/session7/Tiger.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,8 +67,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager" selected="Application.Program (1)">
+  <component name="RunManager" selected="JUnit.IteaTests">
     <configuration name="Program (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task7.Program" />
       <module name="itea-oleg" />
@@ -46,23 +83,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="session7.Program" />
+    <configuration name="IteaTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="itea-oleg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="session7.*" />
+          <option name="PATTERN" value="session8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="session8" />
+      <option name="MAIN_CLASS_NAME" value="session8.IteaTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IteaTests.Courses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="itea-oleg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="session8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="session8" />
+      <option name="MAIN_CLASS_NAME" value="session8.IteaTests" />
+      <option name="METHOD_NAME" value="Courses" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IteaTests.openChildrenCourses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="itea-oleg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="session8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="session8" />
+      <option name="MAIN_CLASS_NAME" value="session8.IteaTests" />
+      <option name="METHOD_NAME" value="openChildrenCourses" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IteaTests.searchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="itea-oleg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="session8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="session8" />
+      <option name="MAIN_CLASS_NAME" value="session8.IteaTests" />
+      <option name="METHOD_NAME" value="searchTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IteaTests" />
+        <item itemvalue="JUnit.IteaTests.searchTest" />
+        <item itemvalue="JUnit.IteaTests.Courses" />
+        <item itemvalue="JUnit.IteaTests.openChildrenCourses" />
         <item itemvalue="Application.Program (1)" />
-        <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
   </component>
@@ -76,5 +166,16 @@
       <updated>1657137073703</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
