@@ -53,6 +53,7 @@ public class SearchTest {
 
         //start browser (initialize WebDriver object)
         driver = new ChromeDriver(capabilities=capabilities);
+        //driver = new ChromeDriver();
 
         //set implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -75,12 +76,12 @@ public class SearchTest {
         homePage.typeSearchTerms("qa automation");
         SearchResultsPage searchResultsPage = PageFactory.initElements(driver, SearchResultsPage.class);
         searchResultsPage.clickMoreDetailsButton();
-        //MoreDetailsPage moreDetailsPage = PageFactory.initElements(driver, MoreDetailsPage.class);
-        //moreDetailsPage.CheckTheTitle("Курси автоматизованого тестування в Києві | ITEA");
+        MoreDetailsPage moreDetailsPage = PageFactory.initElements(driver, MoreDetailsPage.class);
+        moreDetailsPage.CheckTheTitle("Курси автоматизованого тестування в Києві | ITEA");
 
 
-        String actualTitle = driver.getTitle();
-        String expectedTitle = "Курси автоматизованого тестування в Києві | ITEA";
-        assertEquals(actualTitle, expectedTitle);
+        //String actualTitle = driver.getTitle();
+        //String expectedTitle = "Курси автоматизованого тестування в Києві | ITEA";
+        //assertEquals(actualTitle, expectedTitle);
     }
 }
