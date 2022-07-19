@@ -48,12 +48,10 @@ public class SearchTest {
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         options.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
         //start browser (initialize WebDriver object)
-        driver = new ChromeDriver(capabilities=capabilities);
+        driver = new ChromeDriver(options=options);
 
         //set implicit wait
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

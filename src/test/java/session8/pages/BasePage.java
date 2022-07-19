@@ -12,11 +12,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
     public WebDriver driver;
@@ -25,8 +25,8 @@ public class BasePage {
 
     public BasePage () {
        // driver = WebDriverManager.chromedriver().create();
-       System.setProperty("webdriver.chrome.driver", "C:\\Users/evolv/chromedriver.exe");
-        // WebDriverManager.chromedriver().setup();
+       //System.setProperty("webdriver.chrome.driver", "C:\\Users/evolv/chromedriver.exe");
+         WebDriverManager.chromedriver().setup();
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
