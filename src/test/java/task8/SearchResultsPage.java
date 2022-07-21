@@ -13,4 +13,7 @@ public class SearchResultsPage extends BasePage{
     @FindBy (xpath = "(//a[contains(text(),\'ПОДРОБНЕЕ\')])[2]")
     WebElement moreDetailsButton;
 
+    public void clickMoreDetailsButton() {
+        moreDetailsButton.click();
+    }
 }

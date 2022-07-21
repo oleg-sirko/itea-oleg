@@ -14,8 +14,15 @@ public class HomePage extends BasePage{
         driver.get("https://itea.ua/uk/");
         driver.manage().window().setSize(new Dimension(1440, 790));
     }
-    public void typeSearch(String text) {
-        typeText(searchField, text);
+    public void typeSearchTerm (String text) {
+
+        searchField.sendKeys(text);
         searchField.sendKeys(Keys.ENTER);
+
+    }
+
+    public void clickShowSearchButton() {
+
+        showSearchButton.click();
     }
 }

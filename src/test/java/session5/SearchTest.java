@@ -23,6 +23,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+
+import java.time.Duration;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -44,24 +46,22 @@ public class SearchTest {
     @Before
     public void setUp() {
         //install latest ChromeDriver
-        //WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "/Users/olegsirko/utils/browsers/chromedriver");
+        WebDriverManager.chromedriver().setup();
+        //System.setProperty("webdriver.chrome.driver", "/Users/olegsirko/utils/browsers/chromedriver");
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         options.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-        //start browser (initialize WebDriver object)
-        driver = new ChromeDriver(capabilities=capabilities);
+        driver = new ChromeDriver(options=options);
 
         //set implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,15);
 
+
         //initialize WebDriverWait object for explicit waits
-        wait = new WebDriverWait(driver,7);
+        //wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
     }
     @After

@@ -1,4 +1,4 @@
-package session8.pages;
+package session10.pages;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
