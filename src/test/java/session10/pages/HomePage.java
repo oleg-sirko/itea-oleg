@@ -1,27 +1,29 @@
-package Task8;
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
+package session10.pages;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class HomePage extends  BasePage{
+public class HomePage extends BasePage {
 
     @FindBy (xpath = "//button[@class = 'show-search']")
-    WebElement showSearchButton;
+    public WebElement showSearchButton;
 
     @FindBy (css = ".header-search #s")
-    WebElement searchField;
+    public WebElement searchField;
 
     @FindBy (xpath = "//a[text()='Дитячі курси']")
-    WebElement childrenCoursesLink;
+    public WebElement childrenCoursesLink;
 
-    WebDriverWait wait;
+    public WebDriverWait wait;
+
 
     public HomePage (WebDriver driver) {
-        super (driver);
+        super(driver);
         driver.get("https://itea.ua/uk/");
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
@@ -31,4 +33,3 @@ public class HomePage extends  BasePage{
         searchField.sendKeys(Keys.ENTER);
     }
 }
-

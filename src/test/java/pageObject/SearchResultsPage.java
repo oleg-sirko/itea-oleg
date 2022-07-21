@@ -1,4 +1,4 @@
-package Task8;
+package pageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,28 +7,25 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.nio.file.WatchEvent;
 import java.time.Duration;
 
 public class SearchResultsPage extends BasePage {
 
-    @FindBy (css = "div:nth-child(3) > .btn")
-    WebElement moreDetailsButton;
+    @FindBy(css = "div:nth-child(3) > .btn")
+    public WebElement moreDetailsLink;
 
-    public SearchResultsPage(WebDriver driver) {
-        super (driver);
+    public SearchResultsPage(WebDriver driver)  {
+        super(driver);
     }
 
-    public void clickMoreDetailsButton () {
+    public void clickMoreDetailsLink(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(moreDetailsButton));
+        wait.until(ExpectedConditions.elementToBeClickable(moreDetailsLink));
         {
             Actions builder = new Actions(driver);
-            builder.moveToElement(moreDetailsButton, 0, 0).perform();
+            builder.moveToElement(moreDetailsLink, 0, 0).perform();
         }
-        moreDetailsButton.click();
-
-
+        moreDetailsLink.click();
     }
 
 }
