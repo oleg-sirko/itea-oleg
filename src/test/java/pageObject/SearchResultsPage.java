@@ -19,7 +19,7 @@ public class SearchResultsPage extends BasePage {
     }
 
     public void clickMoreDetailsLink(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(moreDetailsLink));
         {
             Actions builder = new Actions(driver);

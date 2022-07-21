@@ -41,10 +41,10 @@ public class SearchTest {
         driver = new ChromeDriver(options=options);
 
         //set implicit wait
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //initialize WebDriverWait object for explicit waits
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 
     }
     @After

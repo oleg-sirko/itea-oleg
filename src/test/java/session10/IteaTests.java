@@ -1,10 +1,10 @@
-package session8;
+package session10;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import session8.pages.BasePage;
-import session8.pages.HomePage;
-import session8.pages.SearchResultsPage;
+import session10.pages.BasePage;
+import session10.pages.HomePage;
+import session10.pages.SearchResultsPage;
 
 import static org.junit.Assert.assertEquals;
 

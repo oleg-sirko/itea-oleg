@@ -43,21 +43,21 @@ public class SearchTest {
     @Before
     public void setUp() {
         //install latest ChromeDriver
-        //WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", "/Users/olegsirko/utils/browsers/chromedriver");
+        WebDriverManager.chromedriver().setup();
+        //System.setProperty("webdriver.chrome.driver", "/Users/olegsirko/utils/browsers/chromedriver");
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
 
-        //start browser (initialize WebDriver object)
         driver = new ChromeDriver(options=options);
 
         //set implicit wait
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 
         //initialize WebDriverWait object for explicit waits
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        //wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
     }
     @After
