@@ -8,10 +8,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
@@ -23,19 +26,15 @@ public class BasePage {
     public BasePage () {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        driver = new ChromeDriver(capabilities=capabilities);
-        driver.manage().window().maximize();
+        driver = new ChromeDriver(options=options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
-
 
     @Before
     public void setUp() {
@@ -65,9 +64,5 @@ public class BasePage {
         field.sendKeys(text);
         wait.until(ExpectedConditions.textToBePresentInElementValue(field, text));
     }
-
- /*  public String getTitle() {
-        return (driver.getTitle());
-    }*/
 
 }

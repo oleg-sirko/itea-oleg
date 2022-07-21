@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class SearchResultsPage extends BasePage {
 
     @FindBy(css = "div:nth-child(3) > .btn")
@@ -17,7 +19,7 @@ public class SearchResultsPage extends BasePage {
     }
 
     public void clickMoreDetailsLink(){
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(moreDetailsLink));
         {
             Actions builder = new Actions(driver);
