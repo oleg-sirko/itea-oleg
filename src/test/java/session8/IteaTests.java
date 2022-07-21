@@ -7,7 +7,7 @@ import session8.pages.BasePage;
 import session8.pages.CoursePage;
 import session8.pages.HomePage;
 import session8.pages.SearchResultsPage;
-
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 
@@ -39,7 +39,7 @@ public class IteaTests extends BasePage {
     @Test
     public void openChildrenCourses () {
         //click on Дитячі Курси link
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        HomePage homePage = PageFactory. initElements(driver, HomePage.class);
         homePage.clickButton(homePage.childrenCoursesLink);
 
         String actualTitle = driver.getTitle();

@@ -13,10 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+import java.util.concurrent.TimeUnit;
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     public WebDriver driver;
@@ -29,14 +28,14 @@ public class BasePage {
         // WebDriverManager.chromedriver().setup();
 
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
     }
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);   //wait = new WebDriverWait(driver,15);
     }
 
     @Before
