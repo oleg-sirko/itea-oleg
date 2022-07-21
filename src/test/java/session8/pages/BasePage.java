@@ -13,9 +13,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import java.util.concurrent.TimeUnit;
+
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     public WebDriver driver;
@@ -23,19 +24,16 @@ public class BasePage {
     public String title;
 
     public BasePage () {
-       // driver = WebDriverManager.chromedriver().create();
-       System.setProperty("webdriver.chrome.driver", "C:\\Users/evolv/chromedriver.exe");
-        // WebDriverManager.chromedriver().setup();
-
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
+        driver = new ChromeDriver(options=options);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);   //wait = new WebDriverWait(driver,15);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @Before
@@ -44,6 +42,7 @@ public class BasePage {
 
     @After
     public void tearDown() {
+        //Close browser
         driver.quit();
     }
 
@@ -54,7 +53,7 @@ public class BasePage {
             builder.moveToElement(button, 0, 0).perform();
         }
         button.click();
-     }
+    }
 
     public void typeText (WebElement field, String text) {
         wait.until(ExpectedConditions.visibilityOf(field));

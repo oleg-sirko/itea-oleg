@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb9c4591-30dc-4c31-80c7-11c5b0e11127" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/session8/IteaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/session8/IteaTests.java" afterDir="false" />
+    <list default="true" id="87f794c4-0d62-4c45-b3ea-61748d766771" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/session10/IteaTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session10/pages/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session10/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session10/pages/SearchResultsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session10/tryCatchExamples/DivisionByZero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/session10/tryCatchExamples/MultipleExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/session5/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/session5/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/session8/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/session8/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/session8/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/session8/pages/HomePage.java" afterDir="false" />
     </list>
@@ -148,5 +158,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
