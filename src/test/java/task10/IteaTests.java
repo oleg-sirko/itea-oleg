@@ -1,10 +1,11 @@
-package session10;
+package task10;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import session10.pages.BasePage;
-import session10.pages.HomePage;
-import session10.pages.SearchResultsPage;
+import task10.pages.BasePage;
+import task10.pages.CoursePage;
+import task10.pages.HomePage;
+import task10.pages.SearchResultsPage;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,8 +28,8 @@ public class IteaTests extends BasePage {
         SearchResultsPage searchResultsPage = PageFactory.initElements(driver, SearchResultsPage.class);
         searchResultsPage.clickButton(searchResultsPage.moreDetailsButton);
 
-        //Get page Title
-        String actualTitle = driver.getTitle();
+        CoursePage coursePage = PageFactory.initElements(driver, CoursePage.class);
+        String actualTitle = coursePage.getTitle();
 
         //Verify Title is as expected
         String expectedTitle = "Курси автоматизованого тестування в Києві | ITEA";
