@@ -13,6 +13,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
@@ -32,18 +34,16 @@ public class SearchTest {
 
         //Setup ChromeOptions so that pop-ups are not blocking access to elements
         ChromeOptions options = new ChromeOptions();
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         options.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking"));
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
         //start browser (initialize WebDriver object)
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options=options);
 
         //set implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //initialize WebDriverWait object for explicit waits
-        wait = new WebDriverWait(driver,7);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 
     }
     @After

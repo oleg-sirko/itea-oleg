@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import task9.BasePage;
 
+import java.time.Duration;
+
 public class HomePage extends BasePage {
 
     @FindBy (xpath = "//button[@class = 'show-search']")
@@ -25,7 +27,7 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super (driver);
         driver.get("https://itea.ua/uk/");
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public void typeSearchTerm (String text) {
