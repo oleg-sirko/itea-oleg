@@ -1,24 +1,52 @@
-package task8;
+package session8.pages;
 
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     public WebDriver driver;
     WebDriverWait wait;
     public String title;
 
+    public BasePage () {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
+        driver = new ChromeDriver(options=options);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    public void clickButton(WebElement button) {
+    @Before
+    public void setUp() {
+    }
+
+    @After
+    public void tearDown() {
+        //Close browser
+        driver.quit();
+    }
+
+    public void clickButton (WebElement button) {
         wait.until(ExpectedConditions.elementToBeClickable(button));
         {
             Actions builder = new Actions(driver);
@@ -27,7 +55,7 @@ public class BasePage {
         button.click();
     }
 
-    public void typeText(WebElement field, String text) {
+    public void typeText (WebElement field, String text) {
         wait.until(ExpectedConditions.visibilityOf(field));
         {
             Actions builder = new Actions(driver);
@@ -36,4 +64,5 @@ public class BasePage {
         field.sendKeys(text);
         wait.until(ExpectedConditions.textToBePresentInElementValue(field, text));
     }
+
 }
